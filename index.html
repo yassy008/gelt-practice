@@ -255,7 +255,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
 .filter-row{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .filter-row:last-child{margin-bottom:0}
 .filter-label{flex:none;font-size:13px;font-weight:700;color:var(--navy);padding:6px 0;width:4.5em}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;flex:1 1 0;min-width:0}
 .chip{
   border:1.5px solid var(--line);background:#fff;border-radius:999px;
   padding:5px 14px;font-size:13px;cursor:pointer;color:var(--ink-soft);transition:.15s;font-family:inherit;
@@ -318,6 +318,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
 .role-lead{background:var(--amber-soft);color:#9a5b14}
 .role-co{background:var(--teal-light);color:var(--teal)}
 .role-circle{background:#efe7f6;color:#6a3f99}
+.role-society{background:#e3edf7;color:#27517e}
 .member-card h4{font-size:17px;color:var(--navy);line-height:1.4}
 .member-card .kana{font-size:11.5px;color:var(--ink-soft);letter-spacing:.08em;margin-bottom:8px}
 .member-card .affil{font-size:13.5px;font-weight:600;margin-bottom:8px}
@@ -706,6 +707,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
             <button class="chip" data-cat="ハンドアウト">ハンドアウト</button>
             <button class="chip" data-cat="ビデオ教材">ビデオ教材</button>
             <button class="chip" data-cat="オンデマンド授業">オンデマンド授業</button>
+            <button class="chip" data-cat="論考・記事">論考・記事</button>
           </div>
         </div>
       </div>
@@ -900,12 +902,18 @@ function renderNews() {
 
 /* ---------- 4) 教材カードの描画と絞り込み ---------- */
 let curLevel = "all", curCat = "all";
+function matDateKey(s){
+  const p = (s || "").split(/[^\d]+/).filter(Boolean);
+  const y = (p[0]||"0").padStart(4,"0"), m = (p[1]||"0").padStart(2,"0"), d = (p[2]||"0").padStart(2,"0");
+  return Number(y + m + d);
+}
 function renderMaterials() {
   const grid = document.getElementById("matGrid");
   const items = MATERIALS_DATA.filter(m =>
     (curLevel === "all" || m.levels.includes(curLevel)) &&
     (curCat === "all" || m.cat === curCat)
   );
+  items.sort((a, b) => matDateKey(b.updated) - matDateKey(a.updated)); // 更新日が新しい順（新→古）
   grid.innerHTML = items.map(m => `
     <article class="mat-card">
       <div class="mat-head">
@@ -965,9 +973,10 @@ setupChips("catChips",  "cat",   v => curCat   = v);
 
 /* ---------- 5) メンバーの描画 ---------- */
 const GROUPS = [
-  { key: "lead",   label: "研究代表者",               cls: "role-lead"   },
-  { key: "co",     label: "研究分担者",               cls: "role-co"     },
-  { key: "circle", label: "研究協力者・研究会メンバー", cls: "role-circle" },
+  { key: "lead",    label: "研究代表者",     cls: "role-lead"    },
+  { key: "co",      label: "研究分担者",     cls: "role-co"      },
+  { key: "circle",  label: "研究協力者",     cls: "role-circle"  },
+  { key: "society", label: "研究会メンバー", cls: "role-society" },
 ];
 function renderMembers() {
   const wrap = document.getElementById("memberSections");
