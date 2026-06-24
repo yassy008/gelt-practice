@@ -931,7 +931,7 @@ function renderMaterials() {
           <span class="m-meta">更新日：${m.updated}</span>
           ${m.mode === "link"
             ? `<a class="btn-link" href="${m.url}" target="_blank" rel="noopener" onclick="return linkNotice(event)">🔗 リンク</a>`
-            : `<a class="btn-dl" href="${m.url}" onclick="return dlNotice(event)">⬇ ダウンロード</a>`}
+            : `<a class="btn-dl" href="${m.url}" download onclick="return dlNotice(event)">⬇ ダウンロード</a>`}
         </div>
       </div>
     </article>`).join("");

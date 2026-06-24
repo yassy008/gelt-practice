@@ -59,7 +59,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・40枚",
     "updated": "2026.06.20",
-    "url": "https://drive.google.com/uc?export=download&id=1FcV1RSAU02ZqhwCtG4lXW0EAc4Ax6HZQ"
+    "url": "materials/slides/20260214_LET_Kanto_Fujiwara.pdf"
   },
   {
     "cat": "リスニング音声",
@@ -87,7 +87,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・2ページ",
     "updated": "2026.06.23",
-    "url": "https://drive.google.com/uc?export=download&id=1sflOwklUHNEO9Sk9hG6f5yaGywaVZnrA"
+    "url": "materials/articles/gelt-feature_01_fujiwara_intro.pdf"
   },
   {
     "cat": "論考・記事",
@@ -99,7 +99,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・2ページ",
     "updated": "2026.06.23",
-    "url": "https://drive.google.com/uc?export=download&id=1krh_uR6TDUmRAGdm3qDhYcZsm0iiHPGC"
+    "url": "materials/articles/gelt-feature_02_shimada_listening.pdf"
   },
   {
     "cat": "論考・記事",
@@ -111,7 +111,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・2ページ",
     "updated": "2026.06.23",
-    "url": "https://drive.google.com/uc?export=download&id=1q-344hP05grADVlAhW1QVqxaGwvDs95l"
+    "url": "materials/articles/gelt-feature_03_kurogi_inquiry.pdf"
   },
   {
     "cat": "論考・記事",
@@ -124,7 +124,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・2ページ",
     "updated": "2026.06.23",
-    "url": "https://drive.google.com/uc?export=download&id=1fadgYEEg3V4ZU9_cPiZEnfHCjwyPNUK6"
+    "url": "materials/articles/gelt-feature_04_saito_views.pdf"
   },
   {
     "cat": "論考・記事",
@@ -136,7 +136,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・1ページ",
     "updated": "2026.06.23",
-    "url": "https://drive.google.com/uc?export=download&id=1BWtATCYZpue53dpK_XqTaQIWcLQW5thx"
+    "url": "materials/articles/gelt-feature_05_sawada_studyabroad.pdf"
   },
   {
     "cat": "論考・記事",
@@ -148,7 +148,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PDF・1ページ",
     "updated": "2026.06.23",
-    "url": "https://drive.google.com/uc?export=download&id=1XMmpdgryunZro7K-61P8HVrMglkOeWHg"
+    "url": "materials/articles/gelt-feature_06_sugimoto_pbl.pdf"
   }
 ];
 
