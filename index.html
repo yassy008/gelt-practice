@@ -292,6 +292,13 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
   font-size:13px;font-weight:700;text-decoration:none;transition:.15s;white-space:nowrap;
 }
 .btn-link:hover{background:#f0b35a}
+/* 書籍カード：書影を左・情報を右に横並び */
+.book-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:6px}
+.book-thumb{flex:none;width:96px}
+.book-thumb img{width:100%;height:auto;border-radius:4px;box-shadow:0 3px 12px rgba(20,42,71,.25);display:block}
+.book-info{flex:1;min-width:0}
+.book-info h4{margin-bottom:8px}
+.mat-foot{margin-top:auto}
 .mat-empty{display:none;text-align:center;color:var(--ink-soft);padding:40px 0;font-size:14px}
 
 /* ============================================================
@@ -709,6 +716,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
             <button class="chip" data-cat="ビデオ教材">ビデオ教材</button>
             <button class="chip" data-cat="オンデマンド授業">オンデマンド授業</button>
             <button class="chip" data-cat="論考・記事">論考・記事</button>
+            <button class="chip" data-cat="書籍">書籍</button>
           </div>
         </div>
       </div>
@@ -922,8 +930,9 @@ function renderMaterials() {
         <span class="m-cat">${m.cat}</span>
       </div>
       <div class="mat-body">
-        <h4>${m.title}</h4>
-        <p class="m-desc">${m.desc}</p>
+        ${m.cover
+          ? `<div class="book-row"><div class="book-thumb"><img src="${m.cover}" alt="${m.title}" loading="lazy"></div><div class="book-info"><h4>${m.title}</h4><p class="m-desc">${m.desc}</p></div></div>`
+          : `<h4>${m.title}</h4><p class="m-desc">${m.desc}</p>`}
         <div class="mat-tags">
           ${m.levels.map(l => `<span class="tag tag-level">${l}</span>`).join("")}
           <span class="tag tag-file">${m.file}</span>
