@@ -39,15 +39,16 @@ const MATERIALS_DATA = [
     "cat": "テスト・評価",
     "icon": "✅",
     "title": "言語意識アンケート（EILPS簡易版・日本語）",
-    "desc": "EIL Perception Scale (Nakamura, 2018) の簡易版アンケート。児童・生徒・学生の英語観／言語意識を測ることができます。実践の事前・事後比較にご活用ください。",
+    "desc": "英語使用者としての意識を測るEILPS（English as an International Language Perception Scale; Nakamura, Lee, & Lee, 2018）にもとづく簡易版アンケート（Googleフォーム）。リンクを開くとご自身のGoogleドライブに複製が作成され、そのまま授業で実施できます。児童・生徒・学生の英語観／言語意識の測定や、実践の事前・事後比較にご活用ください。",
     "levels": [
       "中学校",
       "高等学校",
       "大学・教員養成"
     ],
-    "file": "PDF＋Excel集計表",
+    "file": "Googleフォーム（複製して使用）",
     "updated": "2026.07.01",
-    "url": "#"
+    "url": "https://docs.google.com/forms/d/1owmPEtbqsBsyCDD8SPwTE2GbEtf10c53LpwHe8puP80/copy",
+    "mode": "link"
   },
   {
     "cat": "スライド",
@@ -149,6 +150,55 @@ const MATERIALS_DATA = [
     "file": "PDF・1ページ",
     "updated": "2026.06.23",
     "url": "materials/articles/gelt-feature_06_sugimoto_pbl.pdf"
+  },
+  {
+    "cat": "論考・記事",
+    "icon": "📰",
+    "title": "海外新刊書紹介：Global Englishes for Language Teaching（藤原康弘）",
+    "desc": "国際英語論を英語教育・教員養成に統合する新パラダイムGELTの代表的入門書（Rose & Galloway 著）の紹介。『英語教育』2020年1月号（68巻11号, p.95／大修館書店）。",
+    "levels": [
+      "大学・教員養成"
+    ],
+    "file": "PDF・1ページ",
+    "updated": "2026.07.03",
+    "url": "materials/articles/2020_1_Intro_to_foreign_books.pdf"
+  },
+  {
+    "cat": "論考・記事",
+    "icon": "📰",
+    "title": "海外新刊書紹介：Language Teacher Education for Global Englishes: A practical resource book（藤原康弘）",
+    "desc": "GELTの視点を英語教員養成に落とし込むための実践リソースブックの紹介。授業・研修で使える活動やタスクを収録。『英語教育』2022年1月号（70巻11号, p.92／大修館書店）。",
+    "levels": [
+      "大学・教員養成"
+    ],
+    "file": "PDF・1ページ",
+    "updated": "2026.07.03",
+    "url": "materials/articles/2022_1_Intro_to_foreign_books.pdf"
+  },
+  {
+    "cat": "論考・記事",
+    "icon": "📰",
+    "title": "海外新刊書紹介：The Routledge Handbook of Teaching English as an International Language（藤原康弘）",
+    "desc": "国際語としての英語（EIL）教育を、理論から実践・評価まで包括的に扱うハンドブックの紹介。国際英語論の最新動向を概観できる一冊。『英語教育』2026年1月号（大修館書店）。",
+    "levels": [
+      "大学・教員養成"
+    ],
+    "file": "PDF・1ページ",
+    "updated": "2026.07.03",
+    "url": "materials/articles/2026_1_intro_to_foreign_books.pdf"
+  },
+  {
+    "cat": "スライド",
+    "icon": "🖥️",
+    "title": "多様な英語変種のリスニング帯活動は中学3年生に何をもたらすのか（島田祥之介・藤原康弘）",
+    "desc": "第55回中部地区英語教育学会 奈良・和歌山・近畿大会（2026年6月）での口頭発表スライド（配布用）。多様な英語変種を聞くリスニング帯活動が、中学3年生の英語観にどのような変化をもたらすかを報告。",
+    "levels": [
+      "中学校",
+      "大学・教員養成"
+    ],
+    "file": "PDF（発表スライド・46ページ）",
+    "updated": "2026.07.03",
+    "url": "materials/slides/celes2026_shimada_fujiwara_listening.pdf"
   }
 ];
 
