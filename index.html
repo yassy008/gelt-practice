@@ -238,6 +238,33 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
 .mat-empty{display:none;text-align:center;color:var(--ink-soft);padding:56px 0;font-size:14.5px}
 .mat-empty b{display:block;font-size:34px;margin-bottom:10px}
 
+/* ============ 動画 ============ */
+.vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.vid-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line-soft);overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.vid-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.vid-thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;border:none;padding:0;cursor:pointer;background:#0f2a44;overflow:hidden}
+.vid-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.vid-card:hover .vid-thumb img{transform:scale(1.04)}
+.vid-play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(15,42,68,.72);color:#fff;font-size:22px;display:grid;place-items:center;padding-left:4px;border:2px solid rgba(255,255,255,.85);transition:.2s;pointer-events:none}
+.vid-card:hover .vid-play{background:var(--teal)}
+.vid-body{padding:16px 20px 18px;flex:1;display:flex;flex-direction:column}
+.vid-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tag-variety{background:#EFE7F6;color:#6A3F99}
+.tag-format{background:#EEF1F3;color:var(--ink-soft)}
+.vid-body h4{font-size:15.5px;color:var(--navy);line-height:1.55;margin-bottom:8px;font-weight:700}
+.vid-body p{font-size:13px;color:var(--ink-soft);flex:1}
+.vid-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:10px;flex-wrap:wrap}
+.vid-modal{position:fixed;inset:0;z-index:300;background:rgba(6,16,28,.88);display:none;align-items:center;justify-content:center;padding:24px}
+.vid-modal.on{display:flex}
+.vid-modal-box{width:min(960px,94vw)}
+.vid-modal-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px}
+.vid-modal-head p{color:#fff;font-size:14.5px;font-weight:700;line-height:1.5}
+.vid-close{flex:none;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.6);color:#fff;border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.vid-close:hover{background:rgba(255,255,255,.28)}
+.vid-frame{aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.vid-frame iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:760px){.vid-grid{grid-template-columns:1fr}}
+
 /* ============ メンバー ============ */
 .member-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .member-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line-soft);padding:28px 22px;text-align:center}
@@ -331,6 +358,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <li><a href="#home" data-nav="home" data-i18n="nav_home">ホーム</a></li>
         <li><a href="#research" data-nav="research" data-i18n="nav_research">研究</a></li>
         <li><a href="#materials" data-nav="materials" data-i18n="nav_materials">教材</a></li>
+        <li><a href="#videos" data-nav="videos" data-i18n="nav_videos">動画</a></li>
         <li><a href="#members" data-nav="members" data-i18n="nav_members">メンバー</a></li>
         <li><a href="#contact" data-nav="contact" data-i18n="nav_contact">コンタクト</a></li>
       </ul>
@@ -505,7 +533,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
             <div class="pillar-num">1</div>
             <div>
               <h4>オンラインプラットフォームの構築</h4>
-              <p>小中高の英語教育と大学の教員養成に資する理論と実践を提供する本サイトを構築・拡充します。指導案、ワークシート、テスト、リスニング音声、授業のオンデマンド映像などを順次公開します。</p>
+              <p>小中高大の英語教育と教員養成に資する理論と実装を提供する本サイトを構築・拡充します。指導案、ワークシート、テスト、リスニング音声、授業のオンデマンド映像などを順次公開します。</p>
             </div>
           </div>
           <div class="pillar-item">
@@ -589,7 +617,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
             <div class="pillar-num">1</div>
             <div>
               <h4>Building an online platform</h4>
-              <p>We are building and expanding this site to provide theory and practice for ELT in primary and secondary schools and for university-based teacher education, publishing lesson plans, worksheets, tests, listening audio, and on-demand class videos.</p>
+              <p>We are building and expanding this site to provide theory and implementation for English language teaching and teacher education from elementary school through university, publishing lesson plans, worksheets, tests, listening audio, and on-demand class videos.</p>
             </div>
           </div>
           <div class="pillar-item">
@@ -635,7 +663,8 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <li>Galloway, N., &amp; Rose, H. (2015). <em>Introducing Global Englishes.</em> Routledge.</li>
         <li>Rose, H., &amp; Galloway, N. (2019). <em>Global Englishes for Language Teaching.</em> Cambridge University Press.</li>
         <li>Rose, H., McKinley, J., &amp; Galloway, N. (2021). Global Englishes and language teaching: A review of pedagogical research. <em>Language Teaching, 54</em>(2), 157–189.</li>
-        <li>Pennycook, A. (2001). <em>Critical Applied Linguistics: A Critical Introduction.</em> Routledge.</li>
+        <li>Pennycook, A. (2021). <em>Critical Applied Linguistics: A Critical Re-Introduction.</em> Routledge.</li>
+        <li>ペニクック, A. (2026). 『批判的応用言語学：批判的「再」入門』（田嶋美砂子, 訳）. 三元社.</li>
         <li>柴田美紀・仲潔・藤原康弘 (2020). 『英語教育のための国際英語論―英語の多様性と国際共通語の視点から』 大修館書店.</li>
       </ul>
 
@@ -685,6 +714,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
           <span class="lang-ja">指導案・ワークシート・テスト・音声・スライド・映像などを無料で公開しています。あわせて、本プロジェクトの趣旨に通じる他の先生・研究者の教材も外部リンクでご紹介します。授業や研修で自由にご活用ください（当サイトの教材は出典の明記を、リンク先の教材は各配布元の利用条件をご確認ください）。</span>
           <span class="lang-en">Lesson plans, worksheets, tests, audio, slides, and videos are freely available (materials themselves are in Japanese). Please credit this site when using our materials, and follow the original providers' terms for externally linked resources.</span>
         </p>
+        <p style="margin-top:12px"><a class="more-link" style="margin-top:0" href="#videos" data-i18n="vid_link">🎬 多様な英語の動画ライブラリはこちら</a></p>
       </div>
 
       <div class="mat-toolbar">
@@ -720,6 +750,67 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
   </div>
 </section>
 
+<!-- ════════════ 動画 ════════════ -->
+<section class="page" id="page-videos">
+  <div class="section">
+    <div class="container">
+      <div class="sec-head">
+        <span class="en">Videos</span>
+        <h2 data-i18n="vid_h">動画ライブラリ</h2>
+        <p class="sec-lead">
+          <span class="lang-ja">世界の多様な英語（インド英語・シンガポール英語・ELFのやりとり など）を実際に見て聞けるYouTube動画を、英語の学習・教育に役立つ視点で選んで紹介します。サムネイルをクリックすると、このページ内でそのまま再生できます。</span>
+          <span class="lang-en">A curated collection of YouTube videos for experiencing the diversity of English — Indian English, Singapore English, ELF interactions, and more. Click a thumbnail to play the video right on this page.</span>
+        </p>
+      </div>
+
+      <div class="mat-toolbar">
+        <div class="mat-search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+          <input type="search" id="vidSearchInput" data-i18n-ph="vid_search_ph" placeholder="キーワードで検索（タイトル・説明・変種）" aria-label="動画を検索">
+          <button class="search-clear" id="vidSearchClear" aria-label="検索をクリア">✕</button>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label" data-i18n="filter_variety">変 種</span>
+          <div class="chips" id="varietyChips" role="group" aria-label="英語変種で絞り込み"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label" data-i18n="filter_format">形 式</span>
+          <div class="chips" id="formatChips" role="group" aria-label="形式で絞り込み"></div>
+        </div>
+      </div>
+
+      <div class="result-bar">
+        <p class="result-count" id="vidResultCount" aria-live="polite"></p>
+        <div class="result-tools">
+          <button class="filter-reset" id="vidFilterReset" data-i18n="filter_reset">条件をクリア</button>
+          <select class="sort-select" id="vidSortSelect" aria-label="並び替え">
+            <option value="new" data-i18n="sort_new">新着順</option>
+            <option value="old" data-i18n="sort_old">古い順</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="vid-grid" id="vidGrid"></div>
+      <p class="mat-empty" id="vidEmpty"><b aria-hidden="true">🎬</b><span data-i18n="vid_empty">該当する動画が見つかりませんでした。</span></p>
+
+      <div class="note">
+        <span class="lang-ja">※ 紹介している動画は各制作者がYouTube上で公開しているものです。授業等で使用する際は、YouTubeの利用規約と各動画の利用条件に従ってください。</span>
+        <span class="lang-en">Videos are published on YouTube by their respective creators. Please follow YouTube's terms of service and each video's conditions when using them in class.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="vid-modal" id="vidModal" role="dialog" aria-modal="true" aria-label="動画プレーヤー">
+    <div class="vid-modal-box">
+      <div class="vid-modal-head">
+        <p id="vidModalTitle"></p>
+        <button class="vid-close" id="vidClose" data-i18n="vid_close">✕ 閉じる</button>
+      </div>
+      <div class="vid-frame"><iframe id="vidFrame" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    </div>
+  </div>
+</section>
+
 <!-- ════════════ メンバー ════════════ -->
 <section class="page" id="page-members">
   <div class="section">
@@ -745,8 +836,8 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <span class="en">Contact</span>
         <h2 data-i18n="con_h">お問い合わせ</h2>
         <p class="sec-lead">
-          <span class="lang-ja">教材の利用・研究会への参加・授業実践のご相談・取材など、お気軽にお寄せください。</span>
-          <span class="lang-en">Inquiries about using the materials, joining the study group, classroom collaboration, or media coverage are all welcome — in Japanese or English.</span>
+          <span class="lang-ja">教材の利用・提供のお申し出、研究会への参加、授業実践のご相談、取材など、お気軽にお寄せください。</span>
+          <span class="lang-en">Inquiries about using or contributing materials, joining the study group, classroom collaboration, or media coverage are all welcome — in Japanese or English.</span>
         </p>
       </div>
 
@@ -768,7 +859,6 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
             <p style="font-size:12.5px;color:var(--ink-soft);margin-bottom:14px">For externally linked materials, please follow the original providers' terms of use.</p>
             <p>We welcome partner schools and study-group members at any time. Replies may take a few days.</p>
           </div>
-          <div class="contact-mail">✉ geltsig@gmail.com</div>
         </div>
 
         <form class="contact-form" id="contactForm" novalidate>
@@ -808,7 +898,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
             <label for="cTopic"><span data-i18n="f_topic">お問い合わせの種類</span><span class="req" data-i18n="f_req3">必須</span></label>
             <select id="cTopic" name="topic" required>
               <option value="">選択してください</option>
-              <option>教材の利用について</option>
+              <option>教材の利用・提供</option>
               <option>研究会参加・実践協力について</option>
               <option>研究内容について</option>
               <option>取材・講演依頼</option>
@@ -844,6 +934,7 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <li><a href="#home" data-i18n="nav_home2">ホーム</a></li>
         <li><a href="#research" data-i18n="nav_research2">研究</a></li>
         <li><a href="#materials" data-i18n="nav_materials2">教材</a></li>
+        <li><a href="#videos" data-i18n="nav_videos2">動画</a></li>
         <li><a href="#members" data-i18n="nav_members2">科研／研究会メンバー</a></li>
         <li><a href="#contact" data-i18n="nav_contact2">コンタクト</a></li>
       </ul>
@@ -865,8 +956,12 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
 /* ---------- 0) 言語切替 ---------- */
 const I18N = {
   ja: {
-    nav_home:"ホーム", nav_research:"研究", nav_materials:"教材", nav_members:"メンバー", nav_contact:"コンタクト",
-    nav_home2:"ホーム", nav_research2:"研究", nav_materials2:"教材", nav_members2:"科研／研究会メンバー", nav_contact2:"コンタクト",
+    nav_home:"ホーム", nav_research:"研究", nav_materials:"教材", nav_videos:"動画", nav_members:"メンバー", nav_contact:"コンタクト",
+    nav_home2:"ホーム", nav_research2:"研究", nav_materials2:"教材", nav_videos2:"動画", nav_members2:"科研／研究会メンバー", nav_contact2:"コンタクト",
+    vid_h:"動画ライブラリ", vid_search_ph:"キーワードで検索（タイトル・説明・変種）",
+    filter_variety:"変 種", filter_format:"形 式",
+    vid_empty:"該当する動画が見つかりませんでした。キーワードや条件を変えてお試しください。",
+    vid_result:"本の動画", vid_yt:"YouTubeで開く", vid_close:"✕ 閉じる", vid_link:"🎬 多様な英語の動画ライブラリはこちら",
     hero_badge:"JSPS科研費 基盤研究（C）プロジェクト",
     hero_search_ph:"教材をキーワードで検索（例：リスニング、指導案、中学校）",
     hero_search_btn:"検索", hero_quick:"よく見られている：",
@@ -897,8 +992,12 @@ const I18N = {
     langBtn:"🌐 English"
   },
   en: {
-    nav_home:"Home", nav_research:"Research", nav_materials:"Materials", nav_members:"Members", nav_contact:"Contact",
-    nav_home2:"Home", nav_research2:"Research", nav_materials2:"Materials", nav_members2:"Members", nav_contact2:"Contact",
+    nav_home:"Home", nav_research:"Research", nav_materials:"Materials", nav_videos:"Videos", nav_members:"Members", nav_contact:"Contact",
+    nav_home2:"Home", nav_research2:"Research", nav_materials2:"Materials", nav_videos2:"Videos", nav_members2:"Members", nav_contact2:"Contact",
+    vid_h:"Video library", vid_search_ph:"Search videos by keyword",
+    filter_variety:"Variety", filter_format:"Format",
+    vid_empty:"No videos matched. Try different keywords or filters.",
+    vid_result:" videos", vid_yt:"Watch on YouTube", vid_close:"✕ Close", vid_link:"🎬 Browse the video library of diverse Englishes",
     hero_badge:"A JSPS KAKENHI research project",
     hero_search_ph:"Search materials by keyword (in Japanese)",
     hero_search_btn:"Search", hero_quick:"Popular:",
@@ -939,7 +1038,7 @@ function applyLang(){
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
   document.getElementById("langBtn").textContent = t("langBtn");
   document.querySelectorAll(".hero-quick a[data-qcat]").forEach(a => { a.textContent = a.dataset.qicon + " " + catLabel(a.dataset.qcat); });
-  renderNews(); renderChips(); renderMaterials(); renderHomeMaterials(); renderMembers();
+  renderNews(); renderChips(); renderMaterials(); renderHomeMaterials(); renderVideoChips(); renderVideos(); renderMembers();
 }
 document.getElementById("langBtn").addEventListener("click", () => {
   LANG = LANG === "ja" ? "en" : "ja";
@@ -948,7 +1047,7 @@ document.getElementById("langBtn").addEventListener("click", () => {
 });
 
 /* ---------- 1) ページ切替（ハッシュ式ルーター） ---------- */
-const PAGES = ["home", "research", "materials", "members", "contact"];
+const PAGES = ["home", "research", "materials", "videos", "members", "contact"];
 function showPage() {
   let id = (location.hash || "#home").replace("#", "");
   if (!PAGES.includes(id)) id = "home";
@@ -991,11 +1090,12 @@ function renderNews() {
 /* ---------- 4) 教材ライブラリ（検索＋絞り込み＋並び替え） ---------- */
 const LEVELS = ["小学校","中学校","高等学校","大学・教員養成"];
 const LEVEL_EN = {"小学校":"lv_es","中学校":"lv_jhs","高等学校":"lv_hs","大学・教員養成":"lv_univ"};
-const CATS = ["指導案","ワークシート","テスト・評価","リスニング音声","スライド","ハンドアウト","ビデオ教材","オンデマンド授業","論考・記事","書籍"];
+const CATS = ["指導案","ワークシート","テスト・評価","リスニング音声","スライド","ハンドアウト","ビデオ教材","オンデマンド授業","論考・記事","書籍","コーパス","データベース"];
 const CAT_EN = {
   "指導案":"Lesson plans","ワークシート":"Worksheets","テスト・評価":"Tests & assessment",
   "リスニング音声":"Listening audio","スライド":"Slides","ハンドアウト":"Handouts",
-  "ビデオ教材":"Videos","オンデマンド授業":"On-demand lessons","論考・記事":"Articles","書籍":"Books"
+  "ビデオ教材":"Videos","オンデマンド授業":"On-demand lessons","論考・記事":"Articles","書籍":"Books",
+  "コーパス":"Corpora","データベース":"Databases"
 };
 function catLabel(c){ return LANG === "en" ? (CAT_EN[c] || c) : c; }
 const CAT_COLOR = {
@@ -1008,7 +1108,9 @@ const CAT_COLOR = {
   "ビデオ教材":   {bg:"#FAECE7", fg:"#993C1D"},
   "オンデマンド授業":{bg:"#FBEAF0", fg:"#993556"},
   "論考・記事":   {bg:"#F1EFE8", fg:"#5F5E5A"},
-  "書籍":         {bg:"#FCF3E1", fg:"#8A5A12"}
+  "書籍":         {bg:"#FCF3E1", fg:"#8A5A12"},
+  "コーパス":     {bg:"#E6F1FB", fg:"#0C447C"},
+  "データベース": {bg:"#EFE7F6", fg:"#6A3F99"}
 };
 let curLevel = "all", curCat = "all", curQ = "", curSort = "new";
 
@@ -1062,7 +1164,7 @@ function matCard(m){
       </div>
       <div class="mat-body">
         ${m.cover
-          ? `<div class="book-row"><div class="book-thumb"><img src="${m.cover}" alt="${m.title}" loading="lazy"></div><div class="book-info"><h4>${m.title}</h4><p class="m-desc">${m.desc}</p></div></div>`
+          ? `<div class="book-row"><div class="book-thumb"><img src="${m.cover}" alt="${m.title}" loading="lazy" onerror="this.parentElement.remove()"></div><div class="book-info"><h4>${m.title}</h4><p class="m-desc">${m.desc}</p></div></div>`
           : `<h4>${m.title}</h4><p class="m-desc">${m.desc}</p>`}
         <div class="mat-tags">
           ${(m.levels||[]).map(l => `<span class="tag tag-level">${levelLabel(l)}</span>`).join("")}
@@ -1142,6 +1244,124 @@ function linkNotice(e) {
   if (href === "#" || !href) { e.preventDefault(); alert("リンク先は現在準備中です。"); return false; }
   return true;
 }
+
+/* ---------- 4b) 動画ライブラリ ---------- */
+const VIDEOS = (typeof VIDEOS_DATA !== "undefined") ? VIDEOS_DATA : [];
+const VARIETY_EN = {
+  "インド英語":"Indian English","シンガポール英語":"Singapore English","アメリカ英語":"American English",
+  "イギリス英語":"British English","オーストラリア英語":"Australian English","フィリピン英語":"Philippine English",
+  "ナイジェリア英語":"Nigerian English","ケニア英語":"Kenyan English","マレーシア英語":"Malaysian English",
+  "香港英語":"Hong Kong English","日本の英語使用":"English use in Japan","ELF（共通語としての英語）":"ELF interaction","ELF":"ELF interaction"
+};
+const FORMAT_EN = {
+  "解説":"Explainer","ニュース・レポート":"News report","インタビュー":"Interview",
+  "対話・ELFのやりとり":"Conversation / ELF","レッスン":"Lesson","ドキュメンタリー":"Documentary","講演":"Talk","その他":"Other"
+};
+const vLabel = v => LANG === "en" ? (VARIETY_EN[v] || v) : v;
+const fLabel = f => LANG === "en" ? (FORMAT_EN[f] || f) : f;
+let vQ = "", vVariety = "all", vFormat = "all", vSort = "new";
+
+function ytId(url){ const m = (url||"").match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{11})/); return m ? m[1] : ""; }
+function vMatchQ(v, q){
+  if (!q) return true;
+  const hay = norm([v.title, v.desc, (v.varieties||[]).join(" "), v.format].join(" "));
+  return q.split(/\s+/).filter(Boolean).every(w => hay.includes(norm(w)));
+}
+function vFiltered(variety, format, q){
+  return VIDEOS.filter(v =>
+    (variety === "all" || (v.varieties||[]).includes(variety)) &&
+    (format === "all" || v.format === format) &&
+    vMatchQ(v, q));
+}
+function renderVideoChips(){
+  const vs = [...new Set(VIDEOS.flatMap(v => v.varieties||[]))];
+  const fs = [...new Set(VIDEOS.map(v => v.format).filter(Boolean))];
+  document.getElementById("varietyChips").innerHTML =
+    [`<button class="chip ${vVariety==='all'?'on':''}" data-variety="all">${t("all")}<span class="cnt">${vFiltered("all",vFormat,vQ).length}</span></button>`]
+    .concat(vs.map(v => `<button class="chip ${vVariety===v?'on':''}" data-variety="${v}">${vLabel(v)}<span class="cnt">${vFiltered(v,vFormat,vQ).length}</span></button>`)).join("");
+  document.getElementById("formatChips").innerHTML =
+    [`<button class="chip ${vFormat==='all'?'on':''}" data-format="all">${t("all")}<span class="cnt">${vFiltered(vVariety,"all",vQ).length}</span></button>`]
+    .concat(fs.map(f => `<button class="chip ${vFormat===f?'on':''}" data-format="${f}">${fLabel(f)}<span class="cnt">${vFiltered(vVariety,f,vQ).length}</span></button>`)).join("");
+}
+function renderVideos(){
+  const grid = document.getElementById("vidGrid");
+  const items = vFiltered(vVariety, vFormat, vQ);
+  items.sort((a, b) => vSort === "old"
+    ? matDateKey(a.updated) - matDateKey(b.updated)
+    : matDateKey(b.updated) - matDateKey(a.updated));
+  grid.innerHTML = items.map(v => {
+    const id = ytId(v.url);
+    const eTitle = (v.title||"").replace(/"/g, "&quot;");
+    return `
+    <article class="vid-card">
+      <button type="button" class="vid-thumb" data-vid="${id}" data-vtitle="${eTitle}" aria-label="${LANG==='en'?'Play: ':'再生：'}${eTitle}">
+        ${id ? `<img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy">` : ""}
+        <span class="vid-play" aria-hidden="true">▶</span>
+      </button>
+      <div class="vid-body">
+        <div class="vid-tags">
+          ${(v.varieties||[]).map(x => `<span class="tag tag-variety">${vLabel(x)}</span>`).join("")}
+          ${v.format ? `<span class="tag tag-format">${fLabel(v.format)}</span>` : ""}
+          ${isNew(v) ? `<span class="m-new">NEW</span>` : ""}
+        </div>
+        <h4>${v.title}</h4>
+        <p>${v.desc||""}</p>
+        <div class="vid-foot">
+          <span class="m-meta">${t("updated")}${v.updated||""}</span>
+          <a class="more-link" style="margin-top:0" href="${v.url}" target="_blank" rel="noopener">${t("vid_yt")} ↗</a>
+        </div>
+      </div>
+    </article>`;}).join("");
+  document.getElementById("vidEmpty").style.display = items.length ? "none" : "block";
+  document.getElementById("vidResultCount").innerHTML = LANG === "en"
+    ? `<b>${items.length}</b>${t("vid_result")}` : `<b>${items.length}</b> ${t("vid_result")}`;
+  const active = vVariety !== "all" || vFormat !== "all" || vQ !== "";
+  document.getElementById("vidFilterReset").style.display = active ? "inline" : "none";
+  document.getElementById("vidSearchClear").style.display = vQ ? "block" : "none";
+}
+function openVideo(id, title){
+  if (!id) return;
+  document.getElementById("vidModalTitle").textContent = title || "";
+  document.getElementById("vidFrame").src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+  document.getElementById("vidModal").classList.add("on");
+  document.body.style.overflow = "hidden";
+  document.getElementById("vidClose").focus();
+}
+function closeVideo(){
+  const modal = document.getElementById("vidModal");
+  if (!modal.classList.contains("on")) return;
+  modal.classList.remove("on");
+  document.getElementById("vidFrame").src = "";
+  document.body.style.overflow = "";
+}
+document.getElementById("vidGrid").addEventListener("click", e => {
+  const b = e.target.closest("[data-vid]"); if (!b) return;
+  openVideo(b.dataset.vid, b.dataset.vtitle);
+});
+document.getElementById("varietyChips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  vVariety = b.dataset.variety; renderVideoChips(); renderVideos();
+});
+document.getElementById("formatChips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  vFormat = b.dataset.format; renderVideoChips(); renderVideos();
+});
+document.getElementById("vidSearchInput").addEventListener("input", e => {
+  vQ = e.target.value.trim(); renderVideoChips(); renderVideos();
+});
+document.getElementById("vidSearchClear").addEventListener("click", () => {
+  vQ = ""; document.getElementById("vidSearchInput").value = "";
+  renderVideoChips(); renderVideos();
+});
+document.getElementById("vidFilterReset").addEventListener("click", () => {
+  vVariety = "all"; vFormat = "all"; vQ = "";
+  document.getElementById("vidSearchInput").value = "";
+  renderVideoChips(); renderVideos();
+});
+document.getElementById("vidSortSelect").addEventListener("change", e => { vSort = e.target.value; renderVideos(); });
+document.getElementById("vidClose").addEventListener("click", closeVideo);
+document.getElementById("vidModal").addEventListener("click", e => { if (e.target === e.currentTarget) closeVideo(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeVideo(); });
 
 /* ---------- 5) メンバー ---------- */
 const GROUPS = [
