@@ -758,8 +758,8 @@ table.info tr:last-child th,table.info tr:last-child td{border-bottom:none}
         <span class="en">Videos</span>
         <h2 data-i18n="vid_h">動画ライブラリ</h2>
         <p class="sec-lead">
-          <span class="lang-ja">世界の多様な英語（インド英語・シンガポール英語・ELFのやりとり など）を実際に見て聞けるYouTube動画を、英語の学習・教育に役立つ視点で選んで紹介します。サムネイルをクリックすると、このページ内でそのまま再生できます。</span>
-          <span class="lang-en">A curated collection of YouTube videos for experiencing the diversity of English — Indian English, Singapore English, ELF interactions, and more. Click a thumbnail to play the video right on this page.</span>
+          <span class="lang-ja">世界の多様な英語を実際に「見て・聞いて」学べるYouTube動画、全<b class="vid-total">–</b>本を収録したライブラリです。TED講演や研究者インタビュー（D. クリスタル、J. ジェンキンスほか）などの理論・概説から、各地の英語変種の解説・ドキュメンタリー・街頭インタビュー、言語意識を考えるコメディまで、教室で使えることを基準に選んでいます。</span>
+          <span class="lang-en">A library of <b class="vid-total">–</b> YouTube videos for seeing and hearing the diversity of English, selected for classroom use — from TED talks and interviews with researchers (D. Crystal, J. Jenkins) to explainers, documentaries, and street interviews on varieties around the world, plus comedy for discussing language attitudes.</span>
         </p>
       </div>
 
@@ -1251,12 +1251,32 @@ const VARIETY_EN = {
   "インド英語":"Indian English","シンガポール英語":"Singapore English","アメリカ英語":"American English",
   "イギリス英語":"British English","オーストラリア英語":"Australian English","フィリピン英語":"Philippine English",
   "ナイジェリア英語":"Nigerian English","ケニア英語":"Kenyan English","マレーシア英語":"Malaysian English",
-  "香港英語":"Hong Kong English","日本の英語使用":"English use in Japan","ELF（共通語としての英語）":"ELF interaction","ELF":"ELF interaction"
+  "香港英語":"Hong Kong English","日本の英語使用":"English use in Japan","日本の英語":"English in Japan","韓国の英語":"English in Korea",
+  "世界の英語（全般）":"Global Englishes (general)","アフリカ系アメリカ人英語":"African American English","ジャマイカ英語":"Jamaican Patois",
+  "南アフリカ英語":"South African English","スコットランド英語":"Scottish English","アイルランド英語":"Irish English",
+  "ニュージーランド英語":"New Zealand English","カナダ英語":"Canadian English",
+  "ELF（共通語としての英語）":"ELF interaction","ELF":"ELF"
 };
 const FORMAT_EN = {
   "解説":"Explainer","ニュース・レポート":"News report","インタビュー":"Interview",
-  "対話・ELFのやりとり":"Conversation / ELF","レッスン":"Lesson","ドキュメンタリー":"Documentary","講演":"Talk","その他":"Other"
+  "対話・ELFのやりとり":"Conversation / ELF","レッスン":"Lesson","ドキュメンタリー":"Documentary","講演":"Talk","コメディ・パフォーマンス":"Comedy / performance","その他":"Other"
 };
+/* 変種の並び順：全般 → 内円 → 外円 → 拡大円 → ELF（カチュルーの3円モデルが目安） */
+const VARIETY_ORDER = [
+  "世界の英語（全般）",
+  "イギリス英語","スコットランド英語","アイルランド英語","アメリカ英語","アフリカ系アメリカ人英語","カナダ英語","オーストラリア英語","ニュージーランド英語",
+  "インド英語","シンガポール英語","香港英語","フィリピン英語","マレーシア英語","ナイジェリア英語","ケニア英語","南アフリカ英語","ジャマイカ英語",
+  "日本の英語","日本の英語使用","韓国の英語",
+  "ELF","ELF（共通語としての英語）"
+];
+/* 形式の並び順：概念を学ぶ → 実際の声を聞く → 授業で使う・楽しむ */
+const FORMAT_ORDER = ["解説","講演","インタビュー","対話・ELFのやりとり","ニュース・レポート","ドキュメンタリー","レッスン","コメディ・パフォーマンス","その他"];
+function orderBy(arr, order){
+  return arr.slice().sort((a, b) => {
+    const ia = order.indexOf(a), ib = order.indexOf(b);
+    return ((ia < 0 ? order.length : ia) - (ib < 0 ? order.length : ib)) || String(a).localeCompare(String(b), "ja");
+  });
+}
 const vLabel = v => LANG === "en" ? (VARIETY_EN[v] || v) : v;
 const fLabel = f => LANG === "en" ? (FORMAT_EN[f] || f) : f;
 let vQ = "", vVariety = "all", vFormat = "all", vSort = "new";
@@ -1274,8 +1294,8 @@ function vFiltered(variety, format, q){
     vMatchQ(v, q));
 }
 function renderVideoChips(){
-  const vs = [...new Set(VIDEOS.flatMap(v => v.varieties||[]))];
-  const fs = [...new Set(VIDEOS.map(v => v.format).filter(Boolean))];
+  const vs = orderBy([...new Set(VIDEOS.flatMap(v => v.varieties||[]))], VARIETY_ORDER);
+  const fs = orderBy([...new Set(VIDEOS.map(v => v.format).filter(Boolean))], FORMAT_ORDER);
   document.getElementById("varietyChips").innerHTML =
     [`<button class="chip ${vVariety==='all'?'on':''}" data-variety="all">${t("all")}<span class="cnt">${vFiltered("all",vFormat,vQ).length}</span></button>`]
     .concat(vs.map(v => `<button class="chip ${vVariety===v?'on':''}" data-variety="${v}">${vLabel(v)}<span class="cnt">${vFiltered(v,vFormat,vQ).length}</span></button>`)).join("");
@@ -1359,6 +1379,7 @@ document.getElementById("vidFilterReset").addEventListener("click", () => {
   renderVideoChips(); renderVideos();
 });
 document.getElementById("vidSortSelect").addEventListener("change", e => { vSort = e.target.value; renderVideos(); });
+document.querySelectorAll(".vid-total").forEach(el => { el.textContent = VIDEOS.length; });
 document.getElementById("vidClose").addEventListener("click", closeVideo);
 document.getElementById("vidModal").addEventListener("click", e => { if (e.target === e.currentTarget) closeVideo(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeVideo(); });
