@@ -15,6 +15,12 @@ const SITE_CONFIG = {
 /* ---- お知らせ（新しいものを上に）：type = news / mat / event / circle ---- */
 const NEWS_DATA = [
   {
+    "date": "2026.08.12",
+    "type": "news",
+    "title": "本サイトを正式に公開しました。指導案・スライド・論考などの教材と、世界の多様な英語に触れられる動画ライブラリを無料で公開しています。授業や研修にご活用ください。",
+    "url": "#materials"
+  },
+  {
     "date": "2026.06.20",
     "type": "circle",
     "title": "第7回 GELT実践研究会（オンライン開催）のご案内　7月22日（水）20時より、オンラインで開催します。希望者の方はこのリンク先からご連絡ください。",
@@ -27,7 +33,7 @@ const NEWS_DATA = [
     "url": "https://www.celes.info/nara2026/"
   },
   {
-    "date": "2026.06.015",
+    "date": "2026.06.15",
     "type": "news",
     "title": "本サイトを公開しました（試験運用中）",
     "url": "#home"
