@@ -59,7 +59,7 @@ const MATERIALS_DATA = [
     ],
     "file": "PPTX 4ファイル（ZIP）",
     "updated": "2026.08.23",
-    "url": "materials/slides/jeopardy_language_culture_igawa.zip"
+    "url": "materials/slides/jeopardy_language_culture_isogawa.zip"
   },
   {
     "cat": "データベース",
