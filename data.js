@@ -15,6 +15,12 @@ const SITE_CONFIG = {
 /* ---- お知らせ（新しいものを上に）：type = news / mat / event / circle ---- */
 const NEWS_DATA = [
   {
+    "date": "2026.09.03",
+    "type": "circle",
+    "title": "第8回 GELT実践研究会（オンライン開催）のご案内　9月23日（水）20時より、オンラインで開催します。希望者の方はこのリンク先からご連絡ください。",
+    "url": "#contact"
+  },
+  {
     "date": "2026.08.20",
     "type": "event",
     "title": "全国英語教育学会 第51回 岡山研究大会（2026.8.22）にて、代表の藤原が「国際英語論の短期的授業効果と『ネイティブ信仰』」と題して発表します。",
@@ -49,6 +55,65 @@ const NEWS_DATA = [
 /* ---- 教材：cat=種類, levels=校種(複数可), url=リンク先。mode="link" の時だけ「リンク」ボタン（既定はダウンロード）---- */
 const MATERIALS_DATA = [
   {
+    "cat": "実践アーカイブ",
+    "icon": "🗂️",
+    "title": "Translanguaging for promoting diversity, equity, and inclusion（Miso Kim・大阪大学）",
+    "desc": "大阪大学のMiso Kim氏が公開する、トランスランゲージング（複数言語資源を横断的に用いる言語実践）を軸とした授業実践アーカイブ。「English & identity」「English & Community」など主題ごとに、週単位の授業活動が具体的な手順とともに公開されています。教材はCanvaで作られており、複製して各教室で自由に使えます。多様性・公正・包摂（DEI）を英語授業でどう扱うかを考える手がかりに。JSPS科研費 若手研究（23K12242）の成果。",
+    "levels": [
+      "高等学校",
+      "大学・教員養成"
+    ],
+    "file": "ウェブサイト（英語・無料）",
+    "updated": "2026.09.03",
+    "url": "https://steady-politician-be8.notion.site/Translanguaging-for-promoting-diversity-equity-and-inclusion-725040145eaf8254acc18156604ff9ae",
+    "mode": "link"
+  },
+  {
+    "cat": "書籍",
+    "icon": "📚",
+    "title": "World Adventures（映像で学ぶ世界の文化と英語）",
+    "desc": "Scott Berlin・小林めぐみ 著（金星堂）。インド、フィリピン、タイ、韓国、トルコ、エジプト、南アフリカ、ブラジル、ペルーなど世界15か国の文化と歴史を、映像とともに学ぶ大学英語教科書。各課に現地の人々への英語インタビューを収録し、World Englishesの多様性に実際に触れられる構成です。フルカラー・全15章。",
+    "levels": [
+      "高等学校",
+      "大学・教員養成"
+    ],
+    "file": "教科書・B5判104ページ（全15章）",
+    "updated": "2026.09.03",
+    "url": "https://www.kinsei-do.co.jp/books/4133/",
+    "mode": "link",
+    "cover": "https://www.kinsei-do.co.jp/bookdata/4133/4133_front.jpg"
+  },
+  {
+    "cat": "書籍",
+    "icon": "📚",
+    "title": "On Board for More World Adventures（続・映像で学ぶ世界の文化と英語）",
+    "desc": "Scott Berlin・小林めぐみ 著（金星堂）。『World Adventures』の続編。オーストラリア、インドネシア、シンガポール、中国、ドイツ、ケニア、モロッコ、レバノン、クウェートなど15か国を新たに訪ね、現地の人々への英語インタビューを通して世界で話される英語の多様性に触れます。全15章・映像教材つき。",
+    "levels": [
+      "高等学校",
+      "大学・教員養成"
+    ],
+    "file": "教科書・B5判104ページ（全15章）",
+    "updated": "2026.09.03",
+    "url": "https://www.kinsei-do.co.jp/books/4134/",
+    "mode": "link",
+    "cover": "https://www.kinsei-do.co.jp/bookdata/4134/4134_front.jpg"
+  },
+  {
+    "cat": "書籍",
+    "icon": "📚",
+    "title": "Understanding English across Cultures（グローバル化社会の英語を考える）",
+    "desc": "本名信行・竹下裕子・James D'Angelo 著（金星堂）。国際共通語といわれる英語の特質と役割を分析した英文を中心に構成された大学英語教科書。読んで理解するだけでなく、自分の問題として考え意見を述べる段階的なタスクにより、国際英語論の視点と異文化間リテラシーを養います。全15章。",
+    "levels": [
+      "高等学校",
+      "大学・教員養成"
+    ],
+    "file": "教科書・B5判104ページ（全15章）",
+    "updated": "2026.09.03",
+    "url": "https://www.kinsei-do.co.jp/books/3942/",
+    "mode": "link",
+    "cover": "https://www.kinsei-do.co.jp/bookdata/3942/3942_front.jpg"
+  },
+  {
     "cat": "ワークシート",
     "icon": "📝",
     "title": "Jeopardy Quiz「言語文化の多様性」帯活動セット（全4回・五十川竣哉）",
@@ -62,8 +127,8 @@ const MATERIALS_DATA = [
     "url": "materials/slides/jeopardy_language_culture_isogawa.zip"
   },
   {
-    "cat": "データベース",
-    "icon": "🗄️",
+    "cat": "実践アーカイブ",
+    "icon": "🗂️",
     "title": "ことばと文化の学びの場 ― 仲潔研究室（岐阜大学）",
     "desc": "仲氏（岐阜大学）のサイト。「ことばとは何か、ことばを教えるとは何か」を主題に、社会言語学を手がかりとして、ことばと文化・社会・教育の関わりを問い続ける場です。「なぜ英語をそのように教えるのか」という前提そのものを問い直し、ことばへの認識を通して社会の在り方を批判的に考える——GELTと問題意識を共有します。対話型AI教材「English Quest」シリーズでは、認知・社会言語学をもとに英語話者の「世界の切り取り方」（第1弾）や、他者との距離感・協力関係を調整する「社会言語学的な英語」（第4弾）を体験的に学べます。「前置詞の風景」シリーズは言語学への入門に、そのほか語順・要約・授業設計を支援する各種アプリも無償公開。",
     "levels": [

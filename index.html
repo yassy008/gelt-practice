@@ -1091,12 +1091,12 @@ function renderNews() {
 /* ---------- 4) 教材ライブラリ（検索＋絞り込み＋並び替え） ---------- */
 const LEVELS = ["小学校","中学校","高等学校","大学・教員養成"];
 const LEVEL_EN = {"小学校":"lv_es","中学校":"lv_jhs","高等学校":"lv_hs","大学・教員養成":"lv_univ"};
-const CATS = ["指導案","ワークシート","テスト・評価","リスニング音声","スライド","ハンドアウト","ビデオ教材","オンデマンド授業","論考・記事","書籍","コーパス","データベース"];
+const CATS = ["指導案","ワークシート","テスト・評価","リスニング音声","スライド","ハンドアウト","ビデオ教材","オンデマンド授業","論考・記事","書籍","コーパス","データベース","実践アーカイブ"];
 const CAT_EN = {
   "指導案":"Lesson plans","ワークシート":"Worksheets","テスト・評価":"Tests & assessment",
   "リスニング音声":"Listening audio","スライド":"Slides","ハンドアウト":"Handouts",
   "ビデオ教材":"Videos","オンデマンド授業":"On-demand lessons","論考・記事":"Articles","書籍":"Books",
-  "コーパス":"Corpora","データベース":"Databases"
+  "コーパス":"Corpora","データベース":"Databases","実践アーカイブ":"Practice archives"
 };
 function catLabel(c){ return LANG === "en" ? (CAT_EN[c] || c) : c; }
 const CAT_COLOR = {
@@ -1111,7 +1111,8 @@ const CAT_COLOR = {
   "論考・記事":   {bg:"#F1EFE8", fg:"#5F5E5A"},
   "書籍":         {bg:"#FCF3E1", fg:"#8A5A12"},
   "コーパス":     {bg:"#E6F1FB", fg:"#0C447C"},
-  "データベース": {bg:"#EFE7F6", fg:"#6A3F99"}
+  "データベース": {bg:"#EFE7F6", fg:"#6A3F99"},
+  "実践アーカイブ": {bg:"#E1F5EE", fg:"#085041"}
 };
 let curLevel = "all", curCat = "all", curQ = "", curSort = "new";
 
