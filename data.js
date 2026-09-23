@@ -15,6 +15,12 @@ const SITE_CONFIG = {
 /* ---- お知らせ（新しいものを上に）：type = news / mat / event / circle ---- */
 const NEWS_DATA = [
   {
+    "date": "2026.09.23",
+    "type": "circle",
+    "title": "第9回 GELT実践研究会（オンライン開催）のご案内　10月28日（水）20時より、オンラインで開催します。希望者の方はこのリンク先からご連絡ください。",
+    "url": "#contact"
+  },
+  {
     "date": "2026.09.03",
     "type": "circle",
     "title": "第8回 GELT実践研究会（オンライン開催）のご案内　9月23日（水）20時より、オンラインで開催します。希望者の方はこのリンク先からご連絡ください。",
@@ -54,6 +60,19 @@ const NEWS_DATA = [
 
 /* ---- 教材：cat=種類, levels=校種(複数可), url=リンク先。mode="link" の時だけ「リンク」ボタン（既定はダウンロード）---- */
 const MATERIALS_DATA = [
+  {
+    "cat": "コーパス",
+    "icon": "🗂️",
+    "title": "ICNALE（International Corpus Network of Asian Learners of English）",
+    "desc": "石川慎一郎氏（神戸大学）が開発・公開する、アジアの英語学習者コーパス。中国・香港・インドネシア・日本・韓国・パキスタン・フィリピン・シンガポール・台湾・タイなど10の国と地域の大学生5,800名超による、作文とスピーチ約19,000サンプル（約412万語）を収録しています。ESL地域とEFL地域の双方を含むため、学習者英語だけでなくアジアの多様な英語（Asian Englishes）を比較・検討できます。話題と条件を統一し、CEFR準拠の習熟度別（A2〜B2+）に整理され、英語母語話者の対照データも収録。ウェブ上の検索画面から無料で利用できます。",
+    "levels": [
+      "大学・教員養成"
+    ],
+    "file": "ウェブサイト（英語・無料）",
+    "updated": "2026.09.23",
+    "url": "https://language.sakura.ne.jp/icnale/",
+    "mode": "link"
+  },
   {
     "cat": "実践アーカイブ",
     "icon": "🗂️",
