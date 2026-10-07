@@ -61,6 +61,46 @@ const NEWS_DATA = [
 /* ---- 教材：cat=種類, levels=校種(複数可), url=リンク先。mode="link" の時だけ「リンク」ボタン（既定はダウンロード）---- */
 const MATERIALS_DATA = [
   {
+    "cat": "オンライン講座",
+    "icon": "🎓",
+    "title": "Changing Englishes: An Online Course For Teachers（York St John University）",
+    "desc": "Christopher J. Hall・Rachel Wicaksono 両氏によるイギリス・ヨークセントジョン大学の英語教員向け無料オンライン講座。英語を単一の実体として捉える「monolithic」な見方と、複数性を前提とする「plurilithic」な見方を対置し、英語の定義・使用・学習・教育・変化という5ユニットで構成されています。ELFとしての実際の使用実態から、教室での指導・評価への含意、さらに同僚や政策立案者への働きかけまでを扱う点が特色。クリエイティブ・コモンズで公開されており、教員研修やワークショップ用に改変して使えます。用語集・文献リスト付き。British Council支援。",
+    "levels": [
+      "大学・教員養成"
+    ],
+    "file": "オンライン講座（英語・無料・全5ユニット）",
+    "updated": "2026.10.08",
+    "url": "https://changingenglishes.online",
+    "mode": "link"
+  },
+  {
+    "cat": "オンライン講座",
+    "icon": "🎓",
+    "title": "The ENRICH CPD Course（ELF-aware な教員研修プログラム）",
+    "desc": "EUのErasmus+事業として、ギリシャ・イタリア・ノルウェー・ポルトガル・トルコの教員養成担当者が共同開発した、ELF（共通語としての英語）の視点に立つ教員研修プログラム。「Using English」「Teaching English」「Learning English」の3領域・全30セクションからなり、各セクションにビデオ講義、省察課題、補助教材が用意されています。第1段階で意識化を図り、第2段階では受講者自身がELFを意識した授業を設計・実施してアクション・リサーチを行う構成。多言語環境の教室とトランスランゲージングも扱います。無料のハンドブックも公開。",
+    "levels": [
+      "大学・教員養成"
+    ],
+    "file": "オンライン講座（英語・無料・全30セクション）",
+    "updated": "2026.10.08",
+    "url": "http://enrichproject.eu/the-cpd-course",
+    "mode": "link"
+  },
+  {
+    "cat": "オンライン講座",
+    "icon": "🎓",
+    "title": "English Pronunciation in a Global World（Vrije Universiteit Amsterdam／FutureLearn）",
+    "desc": "アムステルダム自由大学がFutureLearnで公開する、発音を扱う無料オンライン講座（全4週・週4時間程度）。「英語話者の非母語話者と母語話者の比は4対1、コミュニケーションの8割は非母語話者どうし」という認識から出発し、標準的なアクセントへの同化ではなく、相互理解可能性（intelligibility）と自身のアイデンティティの双方を満たす発音をめざします。母音・子音・強勢・イントネーションに加え、rhoticityなどアクセント間の差異も扱い、受講者自身が目標を設定する設計。14万人以上が受講。",
+    "levels": [
+      "高等学校",
+      "大学・教員養成"
+    ],
+    "file": "オンライン講座（英語・無料・全4週）",
+    "updated": "2026.10.08",
+    "url": "https://www.futurelearn.com/courses/english-pronunciation",
+    "mode": "link"
+  },
+  {
     "cat": "コーパス",
     "icon": "🗂️",
     "title": "ICNALE（International Corpus Network of Asian Learners of English）",
