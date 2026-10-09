@@ -913,6 +913,306 @@ const VIDEOS_DATA = [
     ],
     "format": "解説",
     "updated": "2026.07.17"
+  },
+  {
+    "title": "Physicalization of computer graphics: Yoichi Ochiai at TEDxTokyo 2014",
+    "url": "https://www.youtube.com/watch?v=Vw2bRUYQky8",
+    "desc": "メディアアーティスト落合陽一氏がTEDxTokyoで行った講演。日本語を第一言語とする研究者が、専門的な内容を英語で聴衆に届けていく姿そのものが、日本の学習者にとって等身大のモデルになります。",
+    "varieties": [
+      "日本の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "The best kindergarten you’ve ever seen | Takaharu Tezuka",
+    "url": "https://www.youtube.com/watch?v=J5jwEyDaR-0",
+    "desc": "建築家・手塚貴晴氏が、東京の円形の幼稚園の設計思想を語る講演。映像と具体物を手がかりに内容が伝わっていく過程を観察でき、「発音の完成度ではなく伝わり方」を考える素材になります。",
+    "varieties": [
+      "日本の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "How New Technology Helps Blind People Explore the World | Chieko Asakawa",
+    "url": "https://www.youtube.com/watch?v=f-mQIWnO3Ag",
+    "desc": "IBMフェロー浅川智恵子氏が、視覚障害のある人の移動を支える技術について語る講演。日本の研究者が国際的な場で英語を用いる実例として、進路や職業と結びつけて紹介できます。",
+    "varieties": [
+      "日本の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "My Escape from North Korea | Hyeonseo Lee",
+    "url": "https://www.youtube.com/watch?v=PdxPCeWw75k",
+    "desc": "北朝鮮から脱出した李晛瑞（イ・ヒョンソ）氏が、自らの経験を語る講演。英語を外国語として学んだ話者が、重い主題を自分の言葉で語りきる例として示せます。",
+    "varieties": [
+      "移動する話者の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "The family I lost in North Korea. And the family I gained | Joseph Kim",
+    "url": "https://www.youtube.com/watch?v=nLeeTVmVrtA",
+    "desc": "北朝鮮出身のジョセフ・キム氏が、失った家族と新たに得た家族について語る講演。語彙は平易で、学習途上の英語でも聞き手を動かせるという実感につながります。",
+    "varieties": [
+      "移動する話者の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "New experiments in self-teaching | Sugata Mitra",
+    "url": "https://www.youtube.com/watch?v=dk60sYrU2RU",
+    "desc": "教育学者スガタ・ミトラ氏が、子どもの自己学習をめぐる一連の実験を報告する講演。インド英語による学術的な語りを聞く教材としても、教育観を揺さぶる題材としても使えます。",
+    "varieties": [
+      "インド英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "The thrilling potential of SixthSense technology | Pranav Mistry",
+    "url": "https://www.youtube.com/watch?v=YrtANPtnhyg",
+    "desc": "研究者プラナヴ・ミストリー氏がウェアラブル技術を実演しながら紹介する講演。実演が多く手がかりが豊富なため、インド英語に初めて触れる段階でも扱いやすい一本です。",
+    "varieties": [
+      "インド英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "East vs west -- the myths that mystify | Devdutt Pattanaik",
+    "url": "https://www.youtube.com/watch?v=I7QwxbImhZI",
+    "desc": "神話学者デヴダット・パトナイク氏が、東西の世界観の違いを神話から読み解く講演。インド英語のリズムに触れると同時に、「普遍」とされる前提を問い直す視点が得られます。",
+    "varieties": [
+      "インド英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Yang Lan: The generation that's remaking China",
+    "url": "https://www.youtube.com/watch?v=c-sxBTNF2U8",
+    "desc": "ジャーナリスト楊瀾（ヤン・ラン）氏が、中国の若い世代の変化を語る講演。中国出身の話者による英語に触れ、隣国の社会状況を英語で知る機会になります。",
+    "varieties": [
+      "中国の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Michael Anti: Behind the Great Firewall of China",
+    "url": "https://www.youtube.com/watch?v=yrcaHGqTqHk",
+    "desc": "ジャーナリスト安替（マイケル・アンティ）氏が、中国のインターネット規制の実態を語る講演。中国の英語使用者の語りと、情報流通をめぐる論点を同時に扱えます。",
+    "varieties": [
+      "中国の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "What I Learned from 100 Days of Rejection | Jia Jiang",
+    "url": "https://www.youtube.com/watch?v=-vZXgApsPCQ",
+    "desc": "中国出身のジア・ジャン氏が、100日間「断られ続ける」実験から学んだことを語る講演。語彙が平易で構成も明快なため、中高生にも扱いやすい一本です。",
+    "varieties": [
+      "中国の英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "My Daughter, Malala | Ziauddin Yousafzai",
+    "url": "https://www.youtube.com/watch?v=h4mmeN8gv9o",
+    "desc": "マララ・ユスフザイ氏の父ジアウディン氏が、娘の教育をめぐる自らの選択を語る講演。パキスタン英語の語りで、教育の権利という主題に向き合えます。",
+    "varieties": [
+      "パキスタン英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Khalida Brohi: How I work to protect women from honor killings",
+    "url": "https://www.youtube.com/watch?v=RAR4cz9wkUk",
+    "desc": "活動家ハリダ・ブロヒ氏が、名誉殺人から女性を守る取り組みと、その過程での失敗を率直に語る講演。",
+    "varieties": [
+      "パキスタン英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "How I Stopped the Taliban from Shutting Down My School | Sakena Yacoobi",
+    "url": "https://www.youtube.com/watch?v=fCKNScHMBGE",
+    "desc": "アフガニスタンで学校と診療所を運営するサキーナ・ヤクービ氏の講演。英語が日常語ではない環境で育った話者が、国際的な場で自らの実践を語る例です。",
+    "varieties": [
+      "アフガニスタンの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Our campaign to ban plastic bags in Bali | Melati and Isabel Wijsen",
+    "url": "https://www.youtube.com/watch?v=P8GCjrDWWUM",
+    "desc": "バリ島でレジ袋禁止を実現した10代の姉妹メラティ・イザベル・ウィジェン氏の講演。同世代の二人が英語で社会に働きかける姿は、学習者にとって具体的な目標像になります。",
+    "varieties": [
+      "インドネシアの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Chimamanda Ngozi Adichie: The Danger of a Single Story",
+    "url": "https://www.youtube.com/watch?v=D9Ihs241zeg",
+    "desc": "作家チママンダ・ンゴズィ・アディーチェ氏による「唯一の物語の危険性」。単一の語りが他者理解をいかに歪めるかを説く講演で、国際英語論や異文化理解の導入として定番の一本です。",
+    "varieties": [
+      "ナイジェリア英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Ngozi Okonjo-Iweala: Let's have a deeper discussion on aid",
+    "url": "https://www.youtube.com/watch?v=bG2QKbpjDqo",
+    "desc": "現WTO事務局長ンゴジ・オコンジョ＝イウェアラ氏が、アフリカへの援助のあり方を問い直す講演。ナイジェリア英語で国際経済を論じる場面に触れられます。",
+    "varieties": [
+      "ナイジェリア英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "William Kamkwamba: How I harnessed the wind",
+    "url": "https://www.youtube.com/watch?v=crjU5hu2fag",
+    "desc": "マラウイで独学の風車を作り上げたウィリアム・カムクワンバ氏の講演。緊張を抱えながら語る様子も含めて、学習者が自分を重ねやすい一本です。",
+    "varieties": [
+      "マラウイ英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Memory Banda: A Warrior’s Cry Against Child Marriage",
+    "url": "https://www.youtube.com/watch?v=xkFTZcUPjBg",
+    "desc": "マラウイのメモリー・バンダ氏が、児童婚に抗う自らの活動を詩とともに語る講演。",
+    "varieties": [
+      "マラウイ英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Kakenya Ntaiya: A girl who demanded school",
+    "url": "https://www.youtube.com/watch?v=m-vyBpWueu4",
+    "desc": "ケニアのマサイの村で学校を求め続け、やがて女子校を設立したカケニヤ・ンタイヤ氏の講演。ケニア英語の語りと、教育へのアクセスという主題を扱えます。",
+    "varieties": [
+      "ケニア英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Juliana Rotich: Meet BRCK, Internet access built for Africa",
+    "url": "https://www.youtube.com/watch?v=qsJYrwzfd6w",
+    "desc": "ケニアの技術者ジュリアナ・ロティッチ氏が、アフリカの環境に合わせた通信機器の開発を語る講演。技術を「輸入する」のではなく自分たちで作る視点が示されます。",
+    "varieties": [
+      "ケニア英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Boniface Mwangi: The day I stood up alone",
+    "url": "https://www.youtube.com/watch?v=W1KIgMXPR28",
+    "desc": "ケニアの写真家ボニフェイス・ムワンギ氏が、一人で声を上げた日のことを語る講演。",
+    "varieties": [
+      "ケニア英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Fred Swaniker: The leaders who ruined Africa, and the generation who can fix it",
+    "url": "https://www.youtube.com/watch?v=kcEIsbO0ivA",
+    "desc": "ガーナ出身のフレッド・スワニカー氏が、アフリカのリーダーシップを世代ごとに整理して論じる講演。構成が明快で、要点を聞き取る活動に向きます。",
+    "varieties": [
+      "ガーナ英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "There’s No Shame in Taking Care of Your Mental Health | Sangu Delle",
+    "url": "https://www.youtube.com/watch?v=BvpmZktlBFs",
+    "desc": "ガーナ出身のサング・デレ氏が、自らの不安障害の経験からメンタルヘルスの語りにくさを問う講演。",
+    "varieties": [
+      "ガーナ英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Bandi Mbubi: Demand a fair trade cell phone",
+    "url": "https://www.youtube.com/watch?v=iPxg6bRgPhE",
+    "desc": "コンゴ民主共和国出身のバンディ・ムブビ氏が、携帯電話の原材料と紛争のつながりを語る講演。身近なモノから世界を考える導入に使えます。",
+    "varieties": [
+      "コンゴの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Mohamed Ali: The link between unemployment and terrorism",
+    "url": "https://www.youtube.com/watch?v=xlggecnjOY0",
+    "desc": "ソマリア出身のモハメド・アリ氏が、若者の失業と暴力の連鎖を論じる講演。",
+    "varieties": [
+      "ソマリアの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "We're building a dystopia just to make people click on ads | Zeynep Tufekci",
+    "url": "https://www.youtube.com/watch?v=iFTWM7HV2UI",
+    "desc": "トルコ出身の社会学者ゼイネップ・トゥフェックチー氏が、広告のためのアルゴリズムが政治情報の流れを左右する仕組みを論じる講演。",
+    "varieties": [
+      "トルコの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "The best stats you've ever seen | Hans Rosling",
+    "url": "https://www.youtube.com/watch?v=hVimVzgtD6w",
+    "desc": "スウェーデンの医師ハンス・ロスリング氏が、データで世界の思い込みを崩していく講演。北欧の話者の英語に触れながら、「先進国／途上国」という枠組みそのものを問い直せます。",
+    "varieties": [
+      "スウェーデンの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "How Arduino is open-sourcing imagination | Massimo Banzi",
+    "url": "https://www.youtube.com/watch?v=UoBUXOOdLXY",
+    "desc": "Arduinoの開発者マッシモ・バンツィ氏が、ものづくりの開放について語る講演。イタリア出身の話者の英語で、技術と教育の接点を扱えます。",
+    "varieties": [
+      "イタリアの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
+  },
+  {
+    "title": "Poverty isn't a lack of character; it's a lack of cash | Rutger Bregman",
+    "url": "https://www.youtube.com/watch?v=ydKcaIE6O1k",
+    "desc": "オランダの歴史家ルトガー・ブレグマン氏が、貧困の捉え方を問い直す講演。オランダ語を母語とする話者の英語の実例としても扱えます。",
+    "varieties": [
+      "オランダの英語"
+    ],
+    "format": "講演",
+    "updated": "2026.10.09"
   }
 ];
 
